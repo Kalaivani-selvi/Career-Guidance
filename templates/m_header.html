@@ -1,0 +1,181 @@
+
+    <!-- Main Body -->
+    <div class="page-wrapper">
+        <!-- Header Start -->
+        <header class="header-wrapper main-header">
+            <div class="header-inner-wrapper">
+                <div class="header-right">
+                    <div class="header-left">
+                        <div class="header-links">
+                            <a href="javascript:void(0);" class="toggle-btn"> 
+                                <span></span>
+                            </a>
+                            <!-- <img src="{{ url_for('static', filename='cg-img/menu1.png') }}" alt="icon" class="toggle-btn"> -->
+                           
+                        </div>
+
+                    </div>
+
+                    <div class="logo">
+                        <h2>CAREER COMPASS <!--<span class="logo1"> [NAVIGATING FUTURE]</span>--></h2>
+                       
+                    </div>
+
+                    <div class="header-controls">
+                        
+                    </div>
+                </div>
+        </header>
+        <!-- Sidebar Start -->
+        <aside class="sidebar-wrapper">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='cg-img/logo3.jpg') }}" alt="Image" class="img-fluid">
+                <h3 class="name">Navigating Future</h3>
+            </div>
+
+
+
+            <div class="side-menu-wrap text-wrap">
+                <ul class="main-menu">
+                    <li class="lines">
+                        <a href="/dashboard" class="active" ><!--style="margin-top: 60px;"-->
+                            <span class="icon-menu text-center">
+                                <img src="{{ url_for('static', filename='cg-img/dashboard.jpg') }}" alt="icon" class="icon-sb">
+                               
+                            </span>
+                            <span class="menu-text">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="lines">
+                        <a href="/profile">
+                            <span class="icon-menu text-center">
+                                <img src="{{ url_for('static', filename='cg-img/profile.png') }}" alt="icon" class="icon-sb">
+                            
+                            </span>
+                            <span class="menu-text">
+                                User Profile
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="lines">
+                        <a href="/career">
+                            <span class="icon-menu text-center">
+                                <img src="{{ url_for('static', filename='cg-img/cg.png') }}" alt="icon" class="icon-sb">
+                               
+                            </span>
+                            <span class="menu-text">
+                                Career Predictor
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="lines">
+                        <a href="/chatbot">
+                            <span class="icon-menu text-center">
+                                <img src="{{ url_for('static', filename='cg-img/chatbot.png') }}" alt="icon" class="icon-sb">
+                              
+                            </span>
+                            <span class="menu-text">
+                                ChatBot
+                            </span>
+                        </a>
+                    </li>
+                    <li class="lines">
+                        <a href="/resume">
+                            <span class="icon-menu text-center">
+                                <img src="{{ url_for('static', filename='cg-img/resume.png') }}" alt="icon" class="icon-sb">
+                                
+                            </span>
+                            <span class="menu-text">
+                                Resume Template
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="lines">
+                        <a href="#">
+                            <span class="icon-menu text-center">
+                                <img src="{{ url_for('static', filename='cg-img/qa.jpg') }}" alt="icon" class="icon-sb">
+                                
+                            </span>
+                            <span class="menu-text">
+                                Q/A
+                            </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="/c-quiz">
+                                    <span class="icon-dash">
+                                    </span>
+                                    <span class="menu-text">
+                                       Communication
+                                    </span>
+                                </a>
+                            </li>
+                           <li class="{% if r1_score is not none and r1_score|default(-1)|int >= 15 %}active{% else %}disabled{% endif %}">
+
+                                <a href="/a-quiz">
+                                    <span class="icon-dash">
+                                    </span>
+                                    <span class="menu-text">
+                                        Aptitude
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="{% if r2_score is not none and r2_score|default(-1)|int >= 15 %}active{% else %}disabled{% endif %}">
+                                <a href="/b-quiz">
+                                    <span class="icon-dash">
+                                    </span>
+                                    <span class="menu-text">
+                                        Behavioural
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="{% if r3_score is not none and r3_score|default(-1)|int >= 15 %}active{% else %}disabled{% endif %}">
+                                <a href="/hr">
+                                    <span class="icon-dash">
+                                    </span>
+                                    <span class="menu-text">
+                                        Hr
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                       
+                        <li class="lines">
+                            <a href="/job-search">
+                                <span class="icon-menu text-center">
+                                    <img src="{{ url_for('static', filename='cg-img/job_search.png') }}" alt="icon" class="icon-sb">
+                                    
+                                </span>
+                                <span class="menu-text">
+                                    Job Search
+                                </span>
+                            </a>
+                        </li>
+                        <li class="lines">
+                            <a href="/f-fb">
+                                <span class="icon-menu text-center">
+                                    <img src="{{ url_for('static', filename='cg-img/feedback.png') }}" alt="icon" class="icon-sb">
+                                    
+                                </span>
+                                <span class="menu-text">
+                                    Feedback
+                                </span>
+                            </a>
+                        </li>
+                    </li>
+                    <li>
+                        <a href="/logout">   
+                            <span class="logout">
+                                Logout
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>

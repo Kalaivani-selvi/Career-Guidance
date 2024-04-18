@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <title>Career Guide</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/icofont.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+    <!--Page Specific -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nice-select.css') }}">
+    <!--Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" id="theme-change" type="text/css" href="#">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='cg-img/favicon.png') }}">
+
+</head>
+
+
+<body class="body-bg">
+    <div style="background: url(static/cg-img/index.jpg) center no-repeat; height: 100vh;">
+        </div>
+    
+    <script src="static/js/bootstrap.min.js"></script>
+    <script>
+        // Function to redirect to another page after 3 seconds
+        function redirectToAnotherPage() {
+          window.location.href = "/welcome"; // Replace this URL with the target URL
+        }
+    
+        // Wait for 3 seconds (3000 milliseconds) and then call the redirectToAnotherPage function
+        setTimeout(redirectToAnotherPage, 3000);
+      </script>
+</body>
+
+
+
+</html>

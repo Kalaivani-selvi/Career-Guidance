@@ -1,0 +1,248 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+    {% include 'm_header.html' %}
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+                        <div class="row"><br>
+
+                            <div class="heading-container1 mt-2">
+                                <h6 class="subheadding text-start">Career Guidance Website Feedback</h6>
+
+                            </div>
+                            <div class="container mt-4">
+                                <form class="mx-auto" action="/f-fb-submit" method="POST">
+                                    <div class="fb">
+                                        <div class="form-check">
+                                            <label class="form-group" for="name">Name:</label>
+                                            <input class="form-control" type="text" id="name" name="name" required>
+
+                                        </div>
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="age">Age:</label>
+                                            <input class="form-control" type="number" id="age" name="age" required>
+
+                                        </div><br>
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q1">Question 1: How helpful did you find the
+                                                articles and resources provided on the website?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="q1"value="Very helpful" required>
+                                                    <label class="form-check-label"> Very helpful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="q1"value="Helpful">
+                                                    <label class="form-check-label"> Helpful</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q1" name="q1"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="q1"value="Not helpful">
+                                                    <label class="form-check-label"> Not helpful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="q1"value="Not applicable">
+                                                    <label class="form-check-label">Not applicable</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q2">Question 2: How user-friendly did you find the website interface?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="q2"value="Very user-friendly" required>
+                                                    <label class="form-check-label">Very user-friendly</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="q2"value="User-friendly">
+                                                    <label class="form-check-label"> User-friendly</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q2" name="q2"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="q2"value="Not user-friendly">
+                                                    <label class="form-check-label">Not user-friendly</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="q2"value="Not applicable">
+                                                    <label class="form-check-label">Not applicable</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q3">Question 3: How useful were the career assessment tools available on the website?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="q3"value="Very useful" required>
+                                                    <label class="form-check-label">Very useful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="q3"value="Useful">
+                                                    <label class="form-check-label"> Useful</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q3" name="q3"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="q3"value="Not useful">
+                                                    <label class="form-check-label">Not useful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="q3"value="Not applicable">
+                                                    <label class="form-check-label">Not applicable</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q4">Question 4: How relevant were the career guidance articles to your needs?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="q4"value="Very relevant" required>
+                                                    <label class="form-check-label">Very relevant</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="q4"value="Relevant">
+                                                    <label class="form-check-label"> Relevant</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q4" name="q4"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="q4"value="Irrelevant">
+                                                    <label class="form-check-label">Irrelevant</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="q4"value="Not applicable">
+                                                    <label class="form-check-label">Not applicable</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q5">Question 5: Overall, how satisfied are you with the career guidance provided by the website?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="q5"value="Very Satisfied" required>
+                                                    <label class="form-check-label">Very Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="q5"value="Satisfied">
+                                                    <label class="form-check-label"> Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q5" name="q5"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="q5"value="Dissatisfied">
+                                                    <label class="form-check-label">Dissatisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="q5"value="Very dissatisfied">
+                                                    <label class="form-check-label">Very dissatisfied</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        
+                                       
+                                        <div class="form-check">
+                                            <label class="form-group" for="comments">Additional Comments:</label><br>
+                                            <textarea class="form-control" id="comments" name="comments" rows="4" cols="50" placeholder="Give any suggession to improve our application."></textarea><br><br>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="errorPopup" class="popup1">
+                                        <div class="row popup-content1">
+                                            <!-- Display the error message here -->
+                                            <div class="col-9 poptext">
+                                                <h3 class="text-success" id="errorMessage">{{ success_message }}</h3>
+                                            </div>
+                                            <div class="col-3">
+                                                <span class="close1" id="closePopup">&#x2714;</span>
+                                            </div>
+                                            <!-- Add a close button for the pop-up -->
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2 col-6 mx-auto" style="justify-content: center;">
+                                        <button type="submit" class="btn6">Submit</button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            {% include 'footer.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Get the pop-up container and the close button
+            var popup = document.getElementById('errorPopup');
+            var closeBtn = document.getElementById('closePopup');
+            
+            // Get the error message element
+            var errorMessage = document.getElementById('errorMessage');
+            
+            // Function to show the pop-up if the error message is present
+            window.onload = function() {
+                if (errorMessage.innerHTML.trim() !== '') {
+                    popup.style.display = 'block';
+                }
+            }
+            
+            // Function to close the pop-up when the close button is clicked
+            closeBtn.onclick = function() {
+                popup.style.display = 'none';
+            }
+            
+            // Function to close the pop-up when the user clicks outside the pop-up
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = 'none';
+                }
+            }
+            
+            </script>
+            
+            
+
+</body>
+
+</html>

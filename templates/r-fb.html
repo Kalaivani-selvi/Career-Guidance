@@ -1,0 +1,257 @@
+
+{% include 'header.html' %} 
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+    {% include 'm_header.html' %}
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+                        <div class="row p-2 list1">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+                                <h5 class="from-title mb-4 text-center">FeedBack</h5>
+                            </div>   
+                             <div class="col text-right">
+                                <a class="navbar-brand" href="/c-quiz">
+                                    <img src="static/cg-img/back.svg" alt="back" class="back">
+                                  </a>
+                            </div>            
+                        </div>
+                        <div class="row"><br>
+
+                            <div class="heading-container1 mt-2">
+                                <h6 class="subheadding text-start">Question and Answer Feedback</h6>
+
+                            </div>
+                            <div class="container mt-4">
+                                <form class="mx-auto" action="/r-fb-submit" method="POST" >
+                                    <div class="fb">
+                                        <div class="form-check">
+                                            <label class="form-group" for="name">Name:</label>
+                                            <input class="form-control" type="text" id="name" name="rname" required>
+
+                                        </div>
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="age">Age:</label>
+                                            <input class="form-control" type="number" id="age" name="rage" required>
+
+                                        </div><br>
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q1">Communication Round: How would you rate your communication skills?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="rq1"value="Excellent" required>
+                                                    <label class="form-check-label">Excellent</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="rq1"value="Good">
+                                                    <label class="form-check-label"> Good</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q1" name="rq1"value="Average">
+                                                    <label class="form-check-label"> Average</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="rq1"value="Needs improvement">
+                                                    <label class="form-check-label">Needs improvement</label>
+                                                </div>
+                                                
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q2">Aptitude Round: How comfortable are you with problem-solving and analytical skills?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="rq2"value="Very comfortable" required>
+                                                    <label class="form-check-label">Very comfortable</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="rq2"value="Comfortable">
+                                                    <label class="form-check-label"> Comfortable</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q2" name="rq2"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="rq2"value="Not comfortable">
+                                                    <label class="form-check-label">Not comfortable</label>
+                                                </div>
+                                               
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q3">Behavioral Round: How do you handle challenging situations and work under pressure?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="rq3"value="Handle well" required>
+                                                    <label class="form-check-label"> Handle well</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="rq3"value="Average">
+                                                    <label class="form-check-label"> Average</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q3" name="rq3"value="Struggle">
+                                                    <label class="form-check-label"> Struggle</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="rq3"value="Not helpful">
+                                                    <label class="form-check-label"> Not helpful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="rq3"value="Not handle well">
+                                                    <label class="form-check-label">Not handle well</label>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q4">HR Round: How would you rate your overall interview experience and interaction with the HR team?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="rq4"value="Very positive" required>
+                                                    <label class="form-check-label">Very positive</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="rq4"value="Positive">
+                                                    <label class="form-check-label">Positive</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q4" name="rq4"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="rq4"value="Negative">
+                                                    <label class="form-check-label">Negative</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="rq4"value="Very negative">
+                                                    <label class="form-check-label">Very negative</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q5">Question 5: How satisfied were you with the interaction during the HR round?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="rq5"value="Very satisfied" required>
+                                                    <label class="form-check-label">Very satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="rq5"value="Satisfied">
+                                                    <label class="form-check-label"> Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q5" name="rq5"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="rq5"value="Dissatisfied">
+                                                    <label class="form-check-label">Dissatisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="rq5"value="Very dissatisfied">
+                                                    <label class="form-check-label">Very dissatisfied</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        
+                                       
+                                        <div class="form-check">
+                                            <label class="form-group" for="comments">Additional Comments:</label><br>
+                                            <textarea class="form-control" id="comments" name="comments4" rows="4" cols="50" placeholder="Give any suggession to improve our application."></textarea><br><br>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="errorPopup" class="popup1">
+                                        <div class="row popup-content1">
+                                            <!-- Display the error message here -->
+                                            <div class="col-9 poptext">
+                                                <h3 class="text-success" id="errorMessage">{{ success_message4 }}</h3>
+                                            </div>
+                                            <div class="col-3">
+                                                <span class="close1" id="closePopup">&#x2714;</span>
+                                            </div>
+                                            <!-- Add a close button for the pop-up -->
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2 col-6 mx-auto" style="justify-content: center;">
+                                        <button type="submit" class="btn6">Submit</button>
+                                    </div>
+                                </form>
+
+                                
+
+
+
+                            </div>
+
+                            {% include 'footer.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Get the pop-up container and the close button
+            var popup = document.getElementById('errorPopup');
+            var closeBtn = document.getElementById('closePopup');
+            
+            // Get the error message element
+            var errorMessage = document.getElementById('errorMessage');
+            
+            // Function to show the pop-up if the error message is present
+            window.onload = function() {
+                if (errorMessage.innerHTML.trim() !== '') {
+                    popup.style.display = 'block';
+                }
+            }
+            
+            // Function to close the pop-up when the close button is clicked
+            closeBtn.onclick = function() {
+                popup.style.display = 'none';
+            }
+            
+            // Function to close the pop-up when the user clicks outside the pop-up
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = 'none';
+                }
+            }
+            
+            </script>
+            
+            
+
+</body>
+
+</html>

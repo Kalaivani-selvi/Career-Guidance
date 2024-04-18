@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="{{ url_for('static', filename='cg-img/circle1.jpg') }}" alt="Circle Image">
+        </div>
+    </div>
+{% include 'm_header.html' %}
+<div class="page-wrapper">
+    <div class="main-content">
+        <div class="row">
+            <h1>Your Behaviour Round Quiz Result</h1>
+            <div class="col-md-2"></div>
+            <div class="col-md-8 center-container">
+                <div class="center form-control result" id="glowing-element">
+                    <p>Your score:  <span class="predicted-text">{{ score }}/20</span></p>
+                </div>
+            </div>
+            <div class="row">
+                {% if message %}
+                <div class="col-9 ">
+                    <p class="form-control rmsg">{{ message }}</p>
+                </div>
+            
+            <div class="col-3">
+                <a href="{{ url_for('b_quiz') }}" class="btn btn-primary rbtn" id="send">Reattempt</a>
+            </div>
+           
+           
+            {% else %}
+            {% endif %}
+            </div>
+            <div>
+                <p class="lmsg">To enhance your skills, consider exploring the following reputable platforms:</p>
+            </div>
+            <div class="row">
+                <div class="rlink">
+                    <ul>              
+                        <li><a href="https://www.coursera.org/browse/psychology">Coursera - Psychology Courses</a></li>
+               
+                        <li><a href="https://www.udacity.com/course/behavioral-psychology--ud953">Udemy - Behavioral Psychology</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+               
+        </div>
+
+  
+    {% include 'footer.html' %}
+</body>
+</html>
+

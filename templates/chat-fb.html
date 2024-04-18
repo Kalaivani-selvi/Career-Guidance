@@ -1,0 +1,265 @@
+
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+    {% include 'm_header.html' %}
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+                        <div class="row p-2 list1">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+                                <h5 class="from-title mb-4 text-center">FeedBack</h5>
+                            </div>   
+                             <div class="col text-right">
+                                <a class="navbar-brand" href="/chatbot">
+                                    <img src="static/cg-img/back.svg" alt="back" class="back">
+                                  </a>
+                            </div>            
+                        </div>
+                        <div class="row"><br>
+
+                            <div class="heading-container1 mt-2">
+                                <h6 class="subheadding text-start">ChatBot Feedback</h6>
+
+                            </div>
+                            <div class="container mt-4">
+                                <form class="mx-auto" action="/chat-fb-submit" method="POST" >
+                                    <div class="fb">
+                                        <div class="form-check">
+                                            <label class="form-group" for="name">Name:</label>
+                                            <input class="form-control" type="text" id="name" name="cbname" required>
+
+                                        </div>
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="age">Age:</label>
+                                            <input class="form-control" type="number" id="age" name="cbage" required>
+
+                                        </div><br>
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q1">Question 1: How satisfied are you with the career guidance provided by the chatbot</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="cbq1"value="Very Satisfied" required>
+                                                    <label class="form-check-label">Very Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="cbq1"value="Satisfied">
+                                                    <label class="form-check-label"> Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q1" name="cbq1"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="cbq1"value="Dissatisfied">
+                                                    <label class="form-check-label">Dissatisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q1" name="cbq1"value="Very dissatisfied">
+                                                    <label class="form-check-label">Very dissatisfied</label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q2">Question 2: How helpful did you find the chatbot in understanding your career goals and aspirations?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="cbq2"value="Very helpful" required>
+                                                    <label class="form-check-label"> Very helpful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="cbq2"value="Helpful">
+                                                    <label class="form-check-label"> Helpful</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q2" name="cbq2"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="cbq2"value="Not helpful">
+                                                    <label class="form-check-label"> Not helpful</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q2" name="cbq2"value=" Not at all helpful">
+                                                    <label class="form-check-label"> Not at all helpful</label>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q3">Question 3: How accurate were the recommendations provided by the chatbot?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="cbq3"value="Very accurate" required>
+                                                    <label class="form-check-label"> Very accurate</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="cbq3"value="Accurate">
+                                                    <label class="form-check-label"> Accurate</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q3" name="cbq3"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="cbq3"value="Inaccurate">
+                                                    <label class="form-check-label"> Inaccurate</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q3" name="cbq3"value="Very inaccurate">
+                                                    <label class="form-check-label">Very inaccurate</label>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q4">Question 4: How satisfied are you with the overall user experience of the chatbot?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="cbq4"value="Very Satisfied" required>
+                                                    <label class="form-check-label">Very Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="cbq4"value="Satisfied">
+                                                    <label class="form-check-label"> Satisfied</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q4" name="cbq4"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="cbq4"value="Dissatisfied">
+                                                    <label class="form-check-label">Dissatisfied</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q4" name="cbq4"value="Very dissatisfied">
+                                                    <label class="form-check-label">Very dissatisfied</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-check mt-3">
+                                            <label class="form-group" for="q5">Question 5: How likely are you to use this career predictor tool again in the future?</label>
+                                            <div class="round">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="cbq5"value="Very likely" required>
+                                                    <label class="form-check-label">Very likely</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="cbq5"value="Likely">
+                                                    <label class="form-check-label">Likely</label>
+                                                </div>
+                                                <div class="form-check">
+
+                                                    <input class="form-check-input" type="radio" id="q5" name="cbq5"value="Neutral">
+                                                    <label class="form-check-label"> Neutral</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="cbq5"value="Unlikely">
+                                                    <label class="form-check-label">Unlikely</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" id="q5" name="cbq5"value="Very unlikely">
+                                                    <label class="form-check-label">Very unlikely</label>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                        
+                                       
+                                        <div class="form-check">
+                                            <label class="form-group" for="comments">Additional Comments:</label><br>
+                                            <textarea class="form-control" id="comments" name="comments2" rows="4" cols="50" placeholder="Give any suggession to improve our application."></textarea><br><br>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="errorPopup" class="popup1">
+                                        <div class="row popup-content1">
+                                            <!-- Display the error message here -->
+                                            <div class="col-9 poptext">
+                                                <h3 class="text-success" id="errorMessage">{{ success_message2 }}</h3>
+                                            </div>
+                                            <div class="col-3">
+                                                <span class="close1" id="closePopup">&#x2714;</span>
+                                            </div>
+                                            <!-- Add a close button for the pop-up -->
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2 col-6 mx-auto" style="justify-content: center;">
+                                        <button type="submit" class="btn6">Submit</button>
+                                    </div>
+                                </form>
+
+                                
+
+
+
+                            </div>
+
+                            {% include 'footer.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Get the pop-up container and the close button
+            var popup = document.getElementById('errorPopup');
+            var closeBtn = document.getElementById('closePopup');
+            
+            // Get the error message element
+            var errorMessage = document.getElementById('errorMessage');
+            
+            // Function to show the pop-up if the error message is present
+            window.onload = function() {
+                if (errorMessage.innerHTML.trim() !== '') {
+                    popup.style.display = 'block';
+                }
+            }
+            
+            // Function to close the pop-up when the close button is clicked
+            closeBtn.onclick = function() {
+                popup.style.display = 'none';
+            }
+            
+            // Function to close the pop-up when the user clicks outside the pop-up
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = 'none';
+                }
+            }
+            
+            </script>
+            
+            
+
+</body>
+
+</html>

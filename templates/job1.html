@@ -1,0 +1,77 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+    {% include 'm_header.html' %}
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="col text-right1 mb-3">
+                <a class="navbar-brand" href="/job-fb">
+                    <img src="static/cg-img/fb-icon.svg" alt="back" class="back">
+                    <span class="from-title">Feedback</span>
+
+                </a>
+            </div>
+            <div class="row mt-4 list1">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+                    <div class="heading-container1 mt-4">
+                        <h6 class="subheadding text-start">Job Search</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+                        <div class="row"><br>
+
+
+                            <form action="/job-search" method="POST" class="mx-auto">
+
+                                <div class="row g-3">
+
+                                    <div class="mt-3 pt-3">
+                                        <label for="query" class="form-group">Search for jobs:</label>
+                                        <input class="form-control" type="text" id="query" name="query" required><br>
+
+                                        <div class="d-grid gap-2 col-6 mx-auto" style="justify-content: center;">
+                                            <button type="submit" class="btn6">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <hr>
+
+                            {% if data %}
+                            <h2>Search Results for "{{ query }}"</h2>
+                            <ul>
+                                {% for job in data %}
+                                <li>
+                                    <h3 class="jobhead mb-3 mt-3">{{ job['employer_name'] }}</h3>
+                                    <div class="container form-control">
+                                        <p class="mt-3"><strong class="form-group jobsubhead">Title:</strong><span
+                                                class="jobpara"> {{ job['job_title'] }}</span></p>
+                                        <p><strong class="form-group jobsubhead">Description:</strong><span
+                                                class="jobpara"> {{ job['job_description'] }}</span></p>
+                                        <p><strong class="form-group jobsubhead">Location:</strong> <span
+                                                class="jobpara"> {{ job['job_city'] }}, {{ job['job_state'] }}, {{
+                                                job['job_country'] }}</span></p>
+                                                
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include 'footer.html' %}
+</body>
+
+</html>

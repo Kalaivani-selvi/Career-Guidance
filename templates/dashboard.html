@@ -1,0 +1,105 @@
+{% include 'header.html' %}
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+
+
+{% include 'm_header.html' %}
+
+        <!-- Container Start -->
+        <div class="page-wrapper">
+            <div class="main-content">
+                <!-- Page Title Start -->
+                <div class="row">
+                    <div class="colxl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-box">
+                                <h4 class="page-title bold">Hi, Welcome Back!</h4><br>
+                                <p class="page-title-semibold">Dash Board</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Start -->
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <!-- Start Card-->
+                        <div class="db-card ad-info-card">
+                            <div class="card-body dd-flex align-items-center">
+                                <div class="icon-info " style="background: #303C6A;">
+                                    <img src="static/cg-img/r2.png" alt="icon">
+                                </div>
+                                <div class="icon-info-text">
+                                    <h5 class="ad-title">Round 1</h5>
+                                    <h4 class="ad-card-title">{{r1_score}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Card-->
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="db-card ad-info-card">
+                            <div class="card-body dd-flex align-items-center">
+                                <div class="icon-info" style="background: #525060;">
+                                    <img src="static/cg-img/r1.png" alt="icon">
+                                </div>
+                                <div class="icon-info-text">
+                                    <h5 class="ad-title">Round 2</h5>
+                                    <h4 class="ad-card-title">{{r2_score}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Card-->
+
+                    <!-- Start Card-->
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="db-card ad-info-card">
+                            <div class="card-body dd-flex align-items-center">
+                                <div class="icon-info " style="background: #525060;">
+                                    <img src="static/cg-img/r3.png" alt="icon">
+                                </div>
+                                <div class="icon-info-text">
+                                    <h5 class="ad-title">Round 3</h5>
+                                    <h4 class="ad-card-title">{{r3_score}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Card-->
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="db-card ad-info-card">
+                            <div class="card-body dd-flex align-items-center">
+                                <div class="icon-info" style="background: #303C6A;">
+                                    <img src="static/cg-img/r4.png" alt="icon">
+                                </div>
+                                <div class="icon-info-text">
+                                    <h5 class="ad-title">Round 4</h5>
+                                    <h4 class="ad-card-title">{{r4_score}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {% include 'piechart-js.html' %}
+                {% include 'pie.html' %}
+            </div>
+           
+           
+        
+        </div>
+        
+    
+    </div>
+   
+    {% include 'footer.html' %}
+</body>
+
+
+
+</html>

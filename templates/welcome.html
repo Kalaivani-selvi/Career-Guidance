@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <title>Career Guide</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/icofont.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+    <!--Page Specific -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nice-select.css') }}">
+    <!--Custom Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" id="theme-change" type="text/css" href="#">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='cg-img/favicon.png') }}">
+
+</head>
+
+
+<body class="body-bg">
+    <div class="w-bg">
+
+        <div
+            style="height: 100vh;width: 100%;display: flex;align-content: center;justify-content: center;align-items: center;">
+            <div class="col">
+                <!-- <div class="col">
+                    <div class="text-center d-flex flex-fill justify-content-center align-items-center mt-4 pt-5" id="welcome"
+                        >
+                        <h1 class="fw-semibold">Your Journey  <br> Our Guidance <br> Endless Possibilities </h1>
+                    </div>
+                </div> -->
+
+                <div class="container" style="margin-top: 380px;">
+                    <div>
+                        <div class="d-grid mt-4" style="justify-content: center;">
+                            <a href="/login" class="lb">Login In Now</a>
+                        </div>
+                        <div class="d-grid mt-4" style="justify-content: center;">
+                            <a href="/register" class="lb">Create Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,80 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+
+    {% include 'm_header.html' %}
+    <div class="page-wrapper">
+        <div class="main-content">
+            <div class="row">
+                <div class="col text-right1">
+                    <a class="navbar-brand" href="/cp-fb">
+                        <img src="static/cg-img/fb-icon.svg" alt="back" class="back">
+                        <span class="from-title">Feedback</span>
+                       
+                      </a>
+                </div>      
+                <div class="col-md-2"></div>
+                <div class="col-md-8 center-container">
+                    <div class="center form-control result" id="glowing-element">
+                        <p>Predicted Result: <span class="predicted-text">{{ predicted_job_role }}</span></p>
+                    </div>
+                   
+                  
+                </div>
+                <div class="container form-control">
+                    <p class="mt-3"><strong class="form-group jobsubhead">Summary:</strong><span class="jobpara p-3">{{ predicted_job_summary }}</span> </p>
+                    <p><strong class="form-group jobsubhead">Responsibilities:</strong></p>
+                    <span class="jobpara">
+                    <ul class="cp-list">
+                        {% for responsibility in predicted_job_responsibilities %}
+                            <li>{{ responsibility }}</li>
+                        {% endfor %}
+                    </ul></span>
+                    <p class="mt-3"><strong class="form-group jobsubhead">Qualifications:</strong></p>
+                    <span class="jobpara">
+                    <ul class="cp-list">
+                        {% for qualification in predicted_job_qualifications %}
+                            <li>{{ qualification }}</li>
+                        {% endfor %}
+                    </ul></span>
+                    <p class="mt-3"><strong class="form-group jobsubhead">Industry Type:</strong><span class="jobpara"> {{ predicted_job_industry_type }} </span></p>
+                  
+                </div>
+                
+      
+   </div>
+
+           
+               
+
+            </div>
+           
+
+            {% include 'footer.html' %}
+
+          
+            <script>
+                // Get the element to apply the glowing effect
+                const element = document.getElementById('glowing-element');
+
+                // Apply the 'glow' class to start the animation
+                element.classList.add('glow');
+
+            </script>
+            <!-- <script>
+                // Function to redirect to another page after 3 seconds
+                function redirectToAnotherPage() {
+                  window.location.href = "/cp-fb"; // Replace this URL with the target URL
+                }
+            
+                // Wait for 3 seconds (3000 milliseconds) and then call the redirectToAnotherPage function
+                setTimeout(redirectToAnotherPage, 3000);
+              </script> -->
+</body>
+
+</html>

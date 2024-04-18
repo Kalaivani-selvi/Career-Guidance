@@ -1,0 +1,70 @@
+<div class="col-xs-12 text-center">
+    <h2>Your Performance</h2>
+</div>
+
+<div id="donut-chart" class="text-center"></div>
+
+<div id="round-scores" class="text-center mt-4"></div>
+
+<script>
+    // Make an AJAX request to fetch the user's scores
+    fetch('/get-scores')
+        .then(response => response.json())
+        .then(data => {
+            // Generate the chart using the fetched scores
+            let chart = bb.generate({
+                data: {
+                    columns: [
+                        ["Round 1", data.r1_score],
+                        ["Round 2", data.r2_score],
+                        ["Round 3", data.r3_score],
+                        ["Round 4", data.r4_score],
+                        // Add more rounds if needed
+                    ],
+                    colors: {
+                        "Round 1": "#1f77b4", // Blue
+                        "Round 2": "#ff7f0e", // Orange
+                        "Round 3": "#2ca02c", // Green
+                        "Round 4": "#ee2b4d",
+                        // Add more colors if needed
+                    },
+                    type: "donut",
+                },
+                donut: {
+                    title: "Result",
+                },
+                bindto: "#donut-chart",
+            });
+
+            // Display round names and scores below the pie chart
+            let roundScoresElement = document.getElementById("round-scores");
+            roundScoresElement.innerHTML = `
+            <h3>Round Scores</h3>
+<table class="table colorful-table mt-4">
+    <tr>
+        <th>Round</th>
+        <th>Score</th>
+    </tr>
+    <tr>
+        <td class="communication">Communication</td>
+        <td>${data.r1_score}</td>
+    </tr>
+    <tr>
+        <td class="aptitude">Aptitude</td>
+        <td>${data.r2_score}</td>
+    </tr>
+    <tr>
+        <td class="behaviour">Behaviour</td>
+        <td>${data.r3_score}</td>
+    </tr>
+    <tr>
+        <td class="hr">HR</td>
+        <td>${data.r4_score}</td>
+    </tr>
+    <!-- Add more rounds if needed -->
+</table>
+
+            `;
+        })
+        .catch(error => console.error('Error fetching scores:', error));
+</script>

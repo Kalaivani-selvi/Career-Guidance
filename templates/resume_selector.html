@@ -1,0 +1,298 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+  <div class="loader">
+    <div class="spinner">
+      <img src="static/cg-img/circle1.jpg" alt="" />
+    </div>
+  </div>
+  {% include 'm_header.html' %}
+  <div class="page-wrapper">
+    <div class="main-content">
+      <div class="col text-right1">
+        <a class="navbar-brand" href="/res-fb">
+          <img src="static/cg-img/fb-icon.svg" alt="back" class="back">
+          <span class="from-title">Feedback</span>
+
+        </a>
+      </div>
+      <div class="row mt-4 list1">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+          <div class="heading-container mt-3">
+            <h6 class="subheadding1 text-start">THE RESUME CREATOR FOR FRESHERS</h6>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="para2">
+        <p>
+        <h4>
+          Best ever resume app especially for freshers,
+          who were all struggling to find a pattern or template to give their
+          best resume on behalf of our team .
+          On knowing the need of the fresh outcomers in having a crisp and
+          proffesional looking resume we have brought you this resume template section.
+        </h4>
+        </p>
+      </div>
+      <div class="para2">
+        <p>
+        <h4>
+          <span class="text-danger">IMPORTANT : </span>Just click to download the below Resume_Template in <span
+            class="text-success">.zip</span> format.And edit with your own .
+        </h4>
+        </p>
+      </div> <div class="row g-3">
+
+        <div class="mt-3 pt-3">
+          <label for="ugCourse" class="form-group">Select your Degree:</label>
+          <select class="form-select" id="resumeCategory" required>
+
+            <option value="" disabled selected>Select Degree</option>
+            <option value="BA">Bachelor of Arts (BA)</option>
+            <option value="BSc">Bachelor of Science (BSc)</option>
+            <option value="BCom">Bachelor of Commerce (BCom)</option>
+            <option value="BE">Bachelor of Engineering (BE) or Bachelor of Technology (B.Tech)
+            </option>
+            <option value="BFA">Bachelor of Fine Arts (BFA)</option>
+            <option value="BBA">Bachelor of Business Administration (BBA)</option>
+            <option value="BArch">Bachelor of Architecture (BArch)</option>
+           
+            <option value="BEd">Bachelor of Education (BEd)</option>
+            
+          </select>
+        </div>
+      </div>
+  
+
+    <div class="image-container" id="resumeContainerBSc">
+      <div class="heading-container1 mt-5">
+        <h6 class="subheadding text-start">RESUME FOR B.SC FRESHERS </h6>
+      </div>
+        <br>
+        <div class="resume-container">
+          <a href="{{ url_for('static', filename='resume/bsc_resume_s-1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/bsc-1.jpeg') }}" alt="Image" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/bsc_resume_s-2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/bsc-2.jpeg') }}" alt="Image1" id="rImage"
+            class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/bsc_rsume_s-3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bsc-3.jpeg') }}" alt="Image2" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/bsc_resume_s-4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bsc-4.jpeg') }}" alt="Image3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/bsc_resume_s-5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bsc-5.jpeg') }}" alt="Image4" id="rImage"
+              class="img-thumbnail"></a>
+        </div>
+        
+
+    </div>
+
+    <div class="image-container" id="resumeContainerBA">
+      <div class="heading-container1 mt-5">
+        <h6 class="subheadding text-start">RESUME FOR B.A FRESHERS </h6>
+      </div>
+       <br>
+       <div class="resume-container">
+        <a href="{{ url_for('static', filename='resume/b_a_resume_1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/ba-1.jpeg') }}" alt="Image-1" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/b_a_resume_2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/ba-2.jpeg') }}" alt="Image-2" id="rImage"
+            class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/b_a_resume_3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/ba-3.jpeg') }}" alt="Image-3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/b_a_resume_4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/ba-4.jpeg') }}" alt="Image-4" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/b_a_resume_5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/ba-5.jpeg') }}" alt="Image-5" id="rImage"
+              class="img-thumbnail"></a>
+          </div>
+    </div>
+	 <div class="image-container" id="resumeContainerBBA">
+    <div class="heading-container1 mt-5">
+      <h6 class="subheadding text-start">RESUME FOR B.BA FRESHERS </h6>
+    </div>
+       <br>
+       <div class="resume-container">
+        <a href="{{ url_for('static', filename='resume/b_a_resume_1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/ba-1.jpeg') }}" alt="Image-1" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/b_a_resume_2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/ba-2.jpeg') }}" alt="Image-2" id="rImage"
+            class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/b_a_resume_3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/ba-3.jpeg') }}" alt="Image-3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/b_a_resume_4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/ba-4.jpeg') }}" alt="Image-4" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/b_a_resume_5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/ba-5.jpeg') }}" alt="Image-5" id="rImage"
+              class="img-thumbnail"></a>
+              </a>
+            </div>
+    </div>
+	<div class="image-container" id="resumeContainerBEd">
+    <div class="heading-container1 mt-5">
+      <h6 class="subheadding text-start">RESUME FOR B.ED FRESHERS </h6>
+    </div>
+       <br>
+       <div class="resume-container">
+        <a href="{{ url_for('static', filename='resume/B.ed-res-1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/b.ed-1.jpeg') }}" alt="Ime" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/B.ed-res-2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/b.ed-2.jpeg') }}" alt="Ime1" id="rImage" class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/B.ed-res-3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/b.ed-3.jpeg') }}" alt="Ime2" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/B.ed-res-4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/b.ed-4.jpeg') }}" alt="Ime3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/B.ed-res-5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/b.ed-5.jpeg') }}" alt="Ime4" id="rImage"
+              class="img-thumbnail"></a>
+              </div>
+    </div>
+	<div class="image-container" id="resumeContainerBArch">
+    <div class="heading-container1 mt-5">
+      <h6 class="subheadding text-start">RESUME FOR B.ARCH FRESHERS</h6>
+    </div>
+       <br>
+       <div class="resume-container">
+         <a href="{{ url_for('static', filename='resume/b_arch-res-1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/b-arch-1.jpeg') }}" alt="age" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/b_arch-res-2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/b.arch-2.jpeg') }}" alt="age1" id="rImage"
+            class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/b_arch-res-3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/b.arch-3.jpeg') }}" alt="age2" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/b_arch-res-4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/b.arch-4.jpeg') }}" alt="age3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/b_arch-res-5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/b.arch-5.jpeg') }}" alt="age4" id="rImage"
+              class="img-thumbnail"></a>
+          </div>
+    </div>
+	<div class="image-container" id="resumeContainerBCom">
+    <div class="heading-container1 mt-5">
+      <h6 class="subheadding text-start">RESUME FOR B.COM FRESHERS </h6>
+    </div>
+       <br>
+       <div class="resume-container">
+          <a href="{{ url_for('static', filename='resume/bcom_res-1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/bcom-1.jpeg') }}" alt="mage" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/bcom_res-2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/bcom-2.jpeg') }}" alt="mage1" id="rImage"
+            class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/bcom_res-3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bcom-3.jpeg') }}" alt="mage2" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/bcom_res-4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bcom-4.jpeg') }}" alt="mage3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/bcom_res-5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bcom-5.jpeg') }}" alt="mage4" id="rImage"
+              class="img-thumbnail"></a>
+          </div>
+    </div>
+	<div class="image-container" id="resumeContainerBFA">
+    <div class="heading-container1 mt-5">
+      <h6 class="subheadding text-start">RESUME FOR B.FA FRESHERS </h6>
+    </div>
+
+       <br>
+       <div class="resume-container">
+          <a href="{{ url_for('static', filename='resume/bfa_res-1.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/bfa-1.jpeg') }}" alt="ge" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/bfa_res-2.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/bfa-2.jpeg') }}" alt="ge1" id="rImage" class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/bfa_res-3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bfa-3.jpeg') }}" alt="ge2" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/bfa_res-4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bfa-4.jpeg') }}" alt="ge3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/bfa_res-5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/bfa-5.jpeg') }}" alt="ge4" id="rImage"
+              class="img-thumbnail"></a>
+          </div>
+    </div>
+	<div class="image-container" id="resumeContainerBE">
+    <div class="heading-container1 mt-5">
+      <h6 class="subheadding text-start">RESUME FOR B.E/B.TECH FRESHERS </h6>
+    </div>
+       <br>
+       <div class="resume-container">
+          <a href="{{ url_for('static', filename='resume/eng-res-1-.zip') }}"> <img
+            src="{{ url_for('static', filename='img/crop/eng-1.jpeg') }}" alt="Im" id="rImage"
+            class="img-thumbnail"></a>
+        <a href="{{ url_for('static', filename='resume/eng-res-2-.zip') }}"><img
+            src="{{ url_for('static', filename='img/crop/eng-2.jpeg') }}" alt="Im1" id="rImage" class="img-thumbnail">
+          <a href="{{ url_for('static', filename='resume/eng-res-3.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/eng-3.jpeg') }}" alt="Im2" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/eng-res-4.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/eng-4.jpeg') }}" alt="Im3" id="rImage"
+              class="img-thumbnail"></a>
+          <a href="{{ url_for('static', filename='resume/eng_res-5.zip') }}"><img
+              src="{{ url_for('static', filename='img/crop/eng-5.jpeg') }}" alt="Im4" id="rImage"
+              class="img-thumbnail"></a>
+          </div>
+    </div>
+
+    <!-- Repeat similar div containers for other categories -->
+
+   
+
+
+      {% include 'footer.html' %}
+      <script>
+        function downloadFile(filePath) {
+          var link = document.createElement('a');
+          link.href = filePath;
+          link.download = filePath.split('/').pop(); // Extracting filename from path
+          link.click();
+        }
+      </script>
+       <script>
+        function hideAllResumeContainers() {
+            var containers = document.querySelectorAll('.image-container');
+            containers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+        }
+
+        function showResumeContainer(category) {
+            hideAllResumeContainers();
+            var containerId = 'resumeContainer' + category;
+            var container = document.getElementById(containerId);
+            if (container) {
+                container.style.display = 'block';
+            }
+        }
+
+        document.getElementById('resumeCategory').addEventListener('change', function() {
+            var selectedCategory = this.value;
+            showResumeContainer(selectedCategory);
+        });
+
+        hideAllResumeContainers(); // Initially hide all containers
+    </script>
+
+</body>
+
+</html>

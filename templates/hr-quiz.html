@@ -1,0 +1,70 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+    {% include 'm_header.html' %}
+    <div class="page-wrapper">
+        <div class="main-content">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+                        <div class="row"><br>
+                            <div class="heading-container mt-2">
+                                <h6 class="subheadding1 text-start">ROUND 4</h6>
+                                
+                              </div>
+
+                            <div class="heading-container1 mt-2">
+                                <h6 class="subheadding text-start">HR Quiz</h6>
+
+                            </div>
+                            <div class="container mt-4">
+                                <form class="mx-auto" action="/hr-submit" method="POST">
+                                    <input type="hidden" name="total_questions" value="{{ questions|length }}">
+                                    {% for question in questions %}
+                                    <div class="form-group mt-1">
+                                        <label for="question_{{ loop.index }}">{{ question['Question'] }}</label>
+                                    </div>
+                                    <div class="round">
+                                        <input type="hidden" name="correct_answer{{ loop.index0 }}" value="{{ question['Correct Answer'] }}">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="option_a{{ loop.index }}" name="answer{{ loop.index0 }}" value="a)">
+                                            <label class="form-check-label"for="option_a{{ loop.index }}">a) {{ question['Option A'] }}</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                            id="option_b{{ loop.index }}" name="answer{{ loop.index0 }}" value="b)">
+                                            <label class="form-check-label"for="option_b{{ loop.index }}">b) {{ question['Option B'] }}</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                            id="option_c{{ loop.index }}" name="answer{{ loop.index0 }}" value="c)">
+                                            <label class="form-check-label"for="option_c{{ loop.index }}">c) {{ question['Option C'] }}</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                            id="option_d{{ loop.index }}" name="answer{{ loop.index0 }}" value="d)">
+                                            <label class="form-check-label"for="option_d{{ loop.index }}">d) {{ question['Option D'] }}</label>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <div class="d-grid gap-2 col-6 mx-auto" style="justify-content: center;">
+                                        <button type="submit" class="btn6">Submit</button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+
+                            {% include 'footer.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

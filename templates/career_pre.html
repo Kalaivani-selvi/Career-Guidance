@@ -1,0 +1,285 @@
+{% include 'header.html' %}
+<body class="body-bg1">
+  <div class="loader">
+      <div class="spinner">
+          <img src="static/cg-img/circle1.jpg" alt="" />
+      </div>
+  </div>
+{% include 'm_header.html' %}
+
+<div class="page-wrapper">
+  <div class="main-content1">
+
+    <div class="container">
+      <div class="row mt-4 list1">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+          <div class="heading-container mt-2">
+            <h6 class="subheadding1 text-start">Career Predictor</h6>
+            
+          </div>
+          <div class="heading-container1">
+          <h6 class="subheadding text-start">ACADEMIC BASED</h6>
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card1">
+          <div class="card1-body">
+            <div class="row"><br>
+              <form class="mx-auto" action="/predict" method="POST">
+               
+
+                <div class="row g-3">
+
+                  <div class="mt-3 pt-3">
+                    <label for="ugCourse" class="form-group">Select your UG Course:</label>
+                    <select class="form-select" id="ugCourse" name="ugCourse" onchange="updateUGSpecializations()"
+                      required>
+
+                      <option value="" disabled selected>Select UG Course</option>
+                      <option value="BA">Bachelor of Arts (BA)</option>
+                      <option value="BSc">Bachelor of Science (BSc)</option>
+                      <option value="BCom">Bachelor of Commerce (BCom)</option>
+                      <option value="BE or BTech">Bachelor of Engineering (BE) or Bachelor of Technology (B.Tech)
+                      </option>
+                      <option value="BFA">Bachelor of Fine Arts (BFA)</option>
+                      <option value="BBA">Bachelor of Business Administration (BBA)</option>
+                      <option value="BArch">Bachelor of Architecture (BArch)</option>
+                      <option value="BCA">Bachelor of Computer Applications (BCA)</option>
+                      <option value="BEd">Bachelor of Education (BEd)</option>
+                      <option value="BSA">Bachelor of Space Arts (BSA)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row g-3 mt-2">
+
+                  <div>
+                    <label for="ugSpecialization" class="form-group">Select your UG Specialization:</label>
+                    <select class="form-select" id="ugSpecialization" name="ugSpecialization" required></select>
+
+                  </div>
+                </div>
+                <div class="rating-container mt-3">
+                  <div class="rating-label">
+                    <label class="form-group" for="cgpa">CGPA</label>
+                  </div>
+                  <div class=" col rating-input" id="cgpa">
+                    <input type="range" name="cgpa" min="1" max="10" step="0.1" value="0"
+                      oninput="updateRating('cgpaRating', this.value)">
+                    <div class="rating-value" id="cgpaRating">0</div>
+                  </div>
+
+
+                  <div class="rating-container mt-3">
+                    <div class="rating-label">
+                        <label class="form-group" for="History of backlogs">History of Backlogs</label>
+                    </div>
+                    <div class="rating-input" id="historyofBacklogs">
+                        <input type="range" name="historyofBacklogs" min="0" max="15" step="1" value="0"
+                            oninput="updateRating('History of backlogsRating', this.value)">
+                        <div class="rating-value" id="History of backlogsRating">0</div>
+                    </div>
+                </div>
+
+                <div class="skills-category mt-3">
+                    <div class="skills-hard">
+                      <div class="heading-container1">
+                        <h6 class="subheadding text-start mb-3">HARD SKILLS:</h6>
+                      </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="computerLiteracy">Computer Literacy</label>
+                            </div>
+                            <div class="rating-input" id="computerLiteracy">
+                                <input type="range" name="computerLiteracy" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('computerLiteracyRating', this.value)" required>
+                                <div class="rating-value" id="computerLiteracyRating">0</div>
+                            </div>
+                        </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="problemSolving">Problem Solving</label>
+                            </div>
+                            <div class="rating-input" id="problemSolving">
+                                <input type="range" name="problemSolving" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('problemSolvingRating', this.value)" required>
+                                <div class="rating-value" id="problemSolvingRating">0</div>
+                            </div>
+                        </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="TechnicalSkill">Technical Skill</label>
+                            </div>
+                            <div class="rating-input" id="TechnicalSkill">
+                                <input type="range" name="TechnicalSkill" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('TechnicalSkillRating', this.value)" required>
+                                <div class="rating-value" id="TechnicalSkillRating">0</div>
+                            </div>
+                        </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="ResearchSkill">Research skill</label>
+                            </div>
+                            <div class="rating-input" id="ResearchSkill">
+                                <input type="range" name="ResearchSkill" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('ResearchSkillRating', this.value)" required>
+                                <div class="rating-value" id="ResearchSkillRating">0</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="skills-category mt-3">
+                    <div class="skills-soft">
+                      <div class="heading-container1">
+                        <h6 class="subheadding text-start mb-3">SOFT SKILLS:</h6>
+                      </div>
+
+
+
+                        <!-- Soft Skills Rating Containers -->
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="communicationSkill">Communication Skill</label>
+                            </div>
+                            <div class="rating-input" id="communicationSkill">
+                                <input type="range" name="communicationSkill" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('communicationSkillRating', this.value)" required>
+                                <div class="rating-value" id="communicationSkillRating">0</div>
+                            </div>
+                        </div>
+
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="interpersonalSkill">Interpersonal skills</label>
+                            </div>
+                            <div class="rating-input" id="interpersonalSkill">
+                                <input type="range" name="interpersonalSkill" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('interpersonalSkillRating', this.value)" required>
+                                <div class="rating-value" id="interpersonalSkillRating">0</div>
+                            </div>
+                        </div>
+
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="teamwork">Teamwork</label>
+                            </div>
+                            <div class="rating-input" id="teamwork">
+                                <input type="range" name="teamwork" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('teamworkRating', this.value)" required>
+                                <div class="rating-value" id="teamworkRating">0</div>
+                            </div>
+                        </div>
+
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="adaptability">Adaptability</label>
+                            </div>
+                            <div class="rating-input" id="adaptability">
+                                <input type="range" name="adaptability" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('adaptabilityRating', this.value)" required>
+                                <div class="rating-value" id="adaptabilityRating">0</div>
+                            </div>
+                        </div>
+                        <!-- Repeat similar rating containers for other soft skills -->
+
+                    </div>
+                </div>
+
+
+                <div class="skills-category mt-3">
+                    <div class="skills-hard">
+                      <div class="heading-container1">
+                        <h6 class="subheadding text-start mb-3">PERSONAL SKILLS:</h6>
+                      </div>
+
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="timeManagement">Time Management</label>
+                            </div>
+                            <div class="rating-input" id="timeManagement">
+                                <input type="range" name="timeManagement" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('timeManagementRating', this.value)" required>
+                                <div class="rating-value" id="timeManagementRating">0</div>
+                            </div>
+                        </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="emotionalIntelligence">Emotional Intelligence</label>
+                            </div>
+                            <div class="rating-input" id="emotionalIntelligence">
+                                <input type="range" name="emotionalIntelligence" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('emotionalIntelligenceRating', this.value)" required>
+                                <div class="rating-value" id="emotionalIntelligenceRating">0</div>
+                            </div>
+                        </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="continousLearning">Continuous Learning</label>
+                            </div>
+                            <div class="rating-input" id="continousLearning">
+                                <input type="range" name="continuousLearning" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('continousLearningRating', this.value)" required>
+                                <div class="rating-value" id="continousLearningRating">0</div>
+                            </div>
+                        </div>
+
+                        <div class="rating-container mt-3">
+                            <div class="rating-label">
+                                <label class="form-group" for="leadership">Leadership</label>
+                            </div>
+                            <div class="rating-input" id="leadership">
+                                <input type="range" name="leadership" min="0" max="10" step="1" value="0"
+                                    oninput="updateRating('leadershipRating', this.value)" required>
+                                <div class="rating-value" id="leadershipRating">0</div>
+                            </div>
+                        </div>
+                        <!-- Repeat similar rating containers for other soft skills -->
+
+                    </div>
+                </div>
+
+
+                  <div class="d-grid gap-2 col-6 mx-auto" style="justify-content: center;">
+                    <button type="submit" class="btn6">Predict</button>
+                  </div>
+
+                </div>
+
+
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% include 'footer.html' %}
+<script src="static/js/cg.js"></script>
+
+</body>
+
+
+
+</html>

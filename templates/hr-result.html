@@ -1,0 +1,46 @@
+
+
+{% include 'header.html' %}
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="{{ url_for('static', filename='cg-img/circle1.jpg') }}" alt="Circle Image">
+        </div>
+    </div>
+{% include 'm_header.html' %}
+<div class="page-wrapper">
+    <div class="main-content">
+        <div class="row">
+            <h1>Your HR Round Quiz Result</h1>
+            <div class="col-md-2"></div>
+            <div class="col-md-8 center-container">
+                <div class="center form-control result" id="glowing-element">
+                    <p>Your score:  <span class="predicted-text">{{ score }}/50</span></p>
+                </div>
+            </div>
+            <div>
+                <p class="lmsg">To enhance your skills, consider exploring the following reputable platforms:</p>
+            </div>
+            <div class="row">
+                <div class="rlink">
+                    <ul>              
+                        <li><a href="https://www.udemy.com/courses/search/?src=ukw&q=job+interview+questions">Udemy - HR Management Courses</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+  
+    {% include 'footer.html' %}
+    <script>
+        // Function to redirect to another page after 3 seconds
+        function redirectToAnotherPage() {
+          window.location.href = "/r-fb"; // Replace this URL with the target URL
+        }
+    
+        // Wait for 3 seconds (3000 milliseconds) and then call the redirectToAnotherPage function
+        setTimeout(redirectToAnotherPage, 5000);
+      </script>
+</body>
+</html>

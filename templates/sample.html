@@ -1,0 +1,97 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+
+    {% include 'm_header.html' %}
+
+    <!-- Op registration -->
+    <div class="page-wrapper">
+        <div class="main-content1">
+
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+                        <form class="separate-form">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-2"><br>
+                                <h5 class="from-title mb-4 text-center">OP Registration</h5>
+                                <div class="row">
+
+
+                                    <div class="container3">
+                                        <div class="round-image-container">
+                                            <input type="file" id="photo" accept="image/*"
+                                                onchange="previewImage(event)">
+                                            <label for="photo" class="photo">Choose Image</label>
+                                            <img id="image-preview" src="#" alt="Preview Image">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3  p-5">
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  form-group">
+
+                                            <label for="name" class="col-form-label">Name  :</label>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                            <input class="form-control" type="text" id="name">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3  p-5">
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  form-group">
+
+                                            <label for="email" class="col-form-label">Mail ID :</label>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                            <input class="form-control" type="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3  p-5">
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  form-group">
+
+                                            <label for="password" class="col-form-label">Password :</label>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                            <input class="form-control" type="password" id="password">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                               
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button type="button" class="btn6">Save</button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    {% include 'footer.html' %}
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var img = document.getElementById('image-preview');
+                img.src = reader.result;
+                img.style.display = 'block'; // Show the image
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+    </script>
+</body>
+
+</html>

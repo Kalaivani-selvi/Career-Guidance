@@ -1,0 +1,85 @@
+{% include 'header.html' %}
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+
+{% include 'm_header.html' %}
+<div class="page-wrapper">
+    <div class="main-content1">
+        <div class="container justify-content-center">
+            <div class="row mt-4 pt-4">
+                <div class="col">
+                    <div class="row p-2 list1">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-1">
+                            <h1 class="from-title mb-4 ">ChatBot</h1>
+                        </div>   
+                         <div class="col text-right1">
+                            <a class="navbar-brand" href="/chat-fb">
+                                <img src="static/cg-img/fb-icon.svg" alt="back" class="back">
+                                <span class="from-title">Feedback</span>
+                               
+                              </a>
+                        </div>            
+                    </div>
+                   
+                    <div class="container mt-3">
+                        <div id="chatbox" class="container form-control">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="botMessage">
+                                        
+                                        <p><span>Career Bot.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form id="userInput" class="row">
+                            <div class="col-9">
+                                <input id="text" type="text" name="msg" placeholder="Message" class="form-control">
+                            </div>
+                            <div class="col-3">
+                                <button type="submit" id="send" class="form-control btn btn-warning">Send</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+        <script>
+            $(document).ready(function () {
+                $("form").on("submit", function (event) {
+                    var rawText = $("#text").val();
+                    var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                    $("#text").val("");
+                    $("#chatbox").append(userHtml);
+                    document.getElementById("userInput").scrollIntoView({
+                        block: "start",
+                        behavior: "smooth",
+                    });
+                    $.ajax({
+                        data: {
+                            msg: rawText,
+                        },
+                        type: "POST",
+                        url: "/get",
+                    }).done(function (data) {
+                        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                        $("#chatbox").append($.parseHTML(botHtml));
+                        document.getElementById("userInput").scrollIntoView({
+                            block: "start",
+                            behavior: "smooth",
+                        });
+                    });
+                    event.preventDefault();
+                });
+            });
+        </script>
+        </body>
+
+        </html>

@@ -1,0 +1,128 @@
+{% include 'header.html' %}
+
+<body class="body-bg1">
+    <div class="loader">
+        <div class="spinner">
+            <img src="static/cg-img/circle1.jpg" alt="" />
+        </div>
+    </div>
+
+    {% include 'm_header.html' %}
+
+    <!-- Op registration -->
+    <div class="page-wrapper">
+        <div class="main-content1">
+
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="card1">
+                    <div class="card1-body">
+
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-2"><br>
+                            <h5 class="from-title mb-4 text-center">Edit Profile</h5>
+                            <form class="separate-form" action="/update_profile" method="POST" enctype="multipart/form-data">
+                                <div class="row">
+
+
+                                    <div class="container3">
+                                        <div class="round-image-container">
+                                            <input type="file" id="photo" accept="image/*" name="photo" onchange="previewImage(event)" >
+                                            <label for="photo" class="photo">Choose Image</label>
+                                            <img id="image-preview" src="{{ photo_url }}" alt="Required Photo" style="display: flex;justify-content: center;align-items: center;">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="container form-control mt-3 p-3">
+                                        <div class="row p-2">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                                                <label for="name" class="col-form-label">Name :</label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <input class="form-control" type="text" id="uname" name="uname" value="{{ name }}" required>
+                                            </div>
+                                        </div>
+                                    
+                                    
+
+                                        <div class="row p-2">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  form-group">
+
+                                                <label for="email" class="col-form-label">Mail ID :</label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                                <input class="form-control" name="email" type="email" id="email"
+                                                    value="{{ email }}">
+                                            </div>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                                                <label for="password" class="col-form-label">Password:</label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                                                <div class="input-group" style="padding-left: 10px;padding-right: 10px;">
+                                                    <input class="form-control" type="password" name="password" id="passwordInput" value="{{ password }}" readonly>
+                                                    <div class="input-group-append" style="padding-right: 20px;
+                                                    margin-top: 10px;">
+                                                        <span>
+                                                            <img src="{{ url_for('static', filename='/cg-img/eye-c.jpg') }}" alt="password" id="passwordToggle" onclick="togglePassword()">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="d-grid gap-2 col-6 mx-auto mt-3" style="justify-content: center;">
+                                    <button type="submit" class="btn6">Save</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    {% include 'footer.html' %}
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var img = document.getElementById('image-preview');
+                img.src = reader.result;
+                img.style.display = 'block'; // Show the image
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+     <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("passwordInput");
+            var passwordToggle = document.getElementById("passwordToggle");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.src = "{{ url_for('static', filename='/cg-img/eye-o.jpg') }}"; // Change the image to hide password
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.src = "{{ url_for('static', filename='/cg-img/eye-c.jpg') }}"; // Change the image to show password
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
