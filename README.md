@@ -40,6 +40,12 @@ Welcome to the Career Guidance Project! This project aims to provide personalize
 ### Demo Video
 
 
+https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/528fafc4-9ea9-43c8-96da-d2700d37c49d
+
+#### See full video using the below link :
+https://drive.google.com/file/d/1RRQU7XlJJHGEG219EBtpoxQqm5daPkvK/view?usp=drive_link
+
+
 ### Screenshots
 ## Landing Page
 ![landing](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/5a09a4f1-c396-4915-85b9-0dea24baa607)
