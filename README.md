@@ -49,15 +49,17 @@ https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/eb6372b8
 ## Landing Page
 ![landing](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/5a09a4f1-c396-4915-85b9-0dea24baa607)
 ## Dashboard 
-![dashboard](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/95180c34-16ad-4a86-ba6d-1f03958a52fe)
+![dashboard](https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/851b058b-ea97-4fb2-bec6-0e9b474cc8e3)
 ## Career Predictor 
-![cp](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/0b02ac10-7073-40b0-bf89-dcfb43c960de)
+![cp](https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/f9eac07e-6395-4de2-a4da-7e75df1df00e)
 ## Chatbot
-![chatbot](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/91ff5ee5-2bd1-49bc-a365-105abfe83b55)
+![chatbot](https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/3458e90c-3886-42fd-b4e4-4d84d8314f8f)
 ## Resume Template
-![rt](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/6278884d-2751-4a48-883d-b9c802b6adaa)
+![rt](https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/b81c0b53-408f-44f2-9481-70fea4a9961c)
 ## Job Search
-![job-search](https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/438b05e4-9f70-43af-afbe-e03c01270bd3)
+![js](https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/375bb746-3233-4ff8-a83a-a6488f1ee315)
+## FeedBack
+![fb](https://github.com/Kalaivani-selvi/Career-Guidance/assets/131773154/22c90ca1-05ab-4107-a9a9-ea75f73b5e1a)
 
 
 
