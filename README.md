@@ -39,9 +39,7 @@ Welcome to the Career Guidance Project! This project aims to provide personalize
 
 ### Demo Video
 
-
-https://github.com/Kalaivani-selvi/Career-Guidance-ML-/assets/131773154/eb6372b8-e674-447e-9773-d0c0afeb49a3
-
+http://127.0.0.1:5000/static//cg-img/eye-o.jpg
 
 
 
