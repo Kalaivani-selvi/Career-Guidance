@@ -7,14 +7,6 @@ import os
 import requests
 from werkzeug.utils import secure_filename
 
-# libraries
-# import numpy as np
-# import pickle
-# import json
-# import nltk
-# from keras.models import load_model
-# from nltk.stem import WordNetLemmatizer
-
 from flask import send_from_directory
 from datetime import datetime
 from openpyxl import load_workbook
@@ -26,10 +18,10 @@ app = Flask(__name__, static_url_path='/static')
 app.secret_key = ''.join(random.choices(string.ascii_letters + string.digits, k=16))
 
 ## MySQL configuration
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'NikiKalai@2003'
-app.config['MYSQL_DB'] = 'career'
+app.config['MYSQL_HOST'] = 'Enter your Host Name'
+app.config['MYSQL_USER'] = 'Enter your User Name'
+app.config['MYSQL_PASSWORD'] = 'Enter your Passsword'
+app.config['MYSQL_DB'] = 'Enter your Database Name'
 
 mysql = MySQL(app)
 
@@ -378,100 +370,6 @@ def get_chatbot_response(user_message):
 
     response = requests.post(url, json=payload, headers=headers)
     return response.json()
-
-
-#chatbot
-
-# lemmatizer = WordNetLemmatizer()
-
-
-# # chat initialization
-# model = load_model("Dataset/chatbot_model.h5")
-# intents = json.loads(open("Intents/intents.json").read())
-# words = pickle.load(open("Dataset/words.pkl", "rb"))
-# classes = pickle.load(open("Dataset/classes.pkl", "rb"))
-
-
-# @app.route("/chatbot")
-# def chatbot():
-#     return render_template("chatbot.html")
-
-
-# @app.route("/get", methods=["POST"])
-# def chatbot_response():
-#     msg = request.form["msg"]
-#     if msg.startswith('my name is'):
-#         name = msg[11:]
-#         ints = predict_class(msg, model)
-#         if ints:
-#             res1 = getResponse(ints, intents)
-#             res = res1.replace("{n}", name)
-#         else:
-#             res = "I'm sorry, I couldn't understand that."
-#     elif msg.startswith('hi my name is'):
-#         name = msg[14:]
-#         ints = predict_class(msg, model)
-#         if ints:
-#             res1 = getResponse(ints, intents)
-#             res = res1.replace("{n}", name)
-#         else:
-#             res = "I'm sorry, I couldn't understand that."
-#     else:
-#         ints = predict_class(msg, model)
-#         if ints:
-#             res = getResponse(ints, intents)
-#         else:
-#             res = "I'm sorry, I couldn't understand that."
-#     return res
-
-
-
-# # chat functionalities
-# def clean_up_sentence(sentence):
-#     sentence_words = nltk.word_tokenize(sentence)
-#     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
-#     return sentence_words
-
-
-# # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
-# def bow(sentence, words, show_details=True):
-#     # tokenize the pattern
-#     sentence_words = clean_up_sentence(sentence)
-#     # bag of words - matrix of N words, vocabulary matrix
-#     bag = [0] * len(words)
-#     for s in sentence_words:
-#         for i, w in enumerate(words):
-#             if w == s:
-#                 # assign 1 if current word is in the vocabulary position
-#                 bag[i] = 1
-#                 if show_details:
-#                     print("found in bag: %s" % w)
-#     return np.array(bag)
-
-
-# def predict_class(sentence, model):
-#     # filter out predictions below a threshold
-#     p = bow(sentence, words, show_details=False)
-#     res = model.predict(np.array([p]))[0]
-#     ERROR_THRESHOLD = 0.25
-#     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
-#     # sort by strength of probability
-#     results.sort(key=lambda x: x[1], reverse=True)
-#     return_list = []
-#     for r in results:
-#         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
-#     return return_list
-
-
-# def getResponse(ints, intents_json):
-#     tag = ints[0]["intent"]
-#     list_of_intents = intents_json["intents"]
-#     for i in list_of_intents:
-#         if i["tag"] == tag:
-#             result = random.choice(i["responses"])
-#             break
-#     return result
-
 
 # Profile route
 @app.route('/profile', methods=['GET', 'POST'])
@@ -828,10 +726,6 @@ def hr():
             return redirect(url_for('b_quiz'))  # Redirect to Round 2 quiz if score cannot be converted to an integer
     else:
         return redirect(url_for('b_quiz'))  # Redirect to Round 2 quiz if score is not available
-
-
-
-
 
 @app.route('/hr-quiz', methods=['POST'])
 def hr_quiz():
