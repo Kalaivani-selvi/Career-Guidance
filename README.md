@@ -39,9 +39,6 @@ Welcome to the Career Guidance Project! This project aims to provide personalize
 
 ### Demo Video
 
-http://127.0.0.1:5000/static//cg-img/eye-o.jpg
-
-
 
 ### Screenshots
 ## Landing Page
