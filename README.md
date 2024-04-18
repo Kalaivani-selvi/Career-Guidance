@@ -14,7 +14,9 @@ Welcome to the Career Guidance Project! This project aims to provide personalize
   - **Round 2 (Aptitude)**: Evaluate aptitude and problem-solving abilities through a series of questions.
   - **Round 3 (Behavioral)**: Analyze behavioral traits and characteristics with specialized questions.
   - **Round 4 (HR)**: Prepare for HR interviews with questions tailored to common interview scenarios.
+- **Job Search** : Provide job search functionality to search jobs based on their role.
 - **Feedback**: Provide feedback and suggestions to help improve the platform and user experience.
+
 
 ## Installation and Usage
 
@@ -25,14 +27,14 @@ Welcome to the Career Guidance Project! This project aims to provide personalize
 ### Installation
 
 1. Clone the repository:
-  - `git clone [https://github.com/Kalaivani-selvi/Career-Guidance-ML-.git]`
-  - `cd Career-Guidance-ML-`
+  - `git clone [https://github.com/Kalaivani-selvi/Career-Guidance]`
+  - `cd Career-Guidance`
 
 2. Install dependencies:
   - `pip install -r requirements.txt`
 
 3. Start the application:
-  -  `python cg.py`
+  -  `python log-reg.py`
 
 
 ### Demo Video
