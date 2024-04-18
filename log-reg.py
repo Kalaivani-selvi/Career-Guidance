@@ -347,7 +347,7 @@ def chat():
     return jsonify({"message": response["result"]})
 
 def get_chatbot_response(user_message):
-    url = "https://open-ai21.p.rapidapi.com/conversationgpt35"
+    url = "url for your message"
     payload = {
         "messages": [
             {
@@ -363,9 +363,9 @@ def get_chatbot_response(user_message):
         "max_tokens": 256
     }
     headers = {
-        "content-type": "application/json",
-        "X-RapidAPI-Key": "5167fad87bmshd240cb454662cebp106d20jsne4de16f885fd",
-        "X-RapidAPI-Host": "open-ai21.p.rapidapi.com"
+        "content-type": "Type of your application",
+        "API-Key": "Enter your API key",
+        "API-Host": "Enter your API Host"
     }
 
     response = requests.post(url, json=payload, headers=headers)
@@ -375,8 +375,7 @@ def get_chatbot_response(user_message):
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
     global user_email  # Access the global variable
-    print(user_email)
-
+  
     email = user_email
     if email:
         cur = mysql.connection.cursor()
@@ -417,16 +416,16 @@ def profile():
 
     
 #profile picture route
-@app.route('/Pictures/<path:filename>')
+@app.route('/Enter your Folder Name/<path:filename>')
 def send_image(filename):
-    return send_from_directory('Pictures', filename)
+    return send_from_directory('Enter your Folder Name', filename)
 
     
 # Get the absolute path of the directory where your script resides
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Define the upload folder relative to the directory where your script resides
-app.config['UPLOAD_FOLDER'] = os.path.join(basedir, 'Pictures')
+app.config['UPLOAD_FOLDER'] = os.path.join(basedir, 'Enter your Folder Name')
 
 
 @app.route('/update_profile', methods=['GET', 'POST'])
@@ -730,7 +729,7 @@ def hr():
 @app.route('/hr-quiz', methods=['POST'])
 def hr_quiz():
     global user_email  # Ensure the global variable is accessible
-    print(user_email)
+   
     role = request.form['role']
     position = request.form['position']
     
@@ -944,10 +943,10 @@ def job_fb_submit():
 ##job search
 
 # Define the API endpoint and headers
-API_URL = "https://jsearch.p.rapidapi.com/search"
+API_URL = "Enter your API url"
 HEADERS = {
-    "X-RapidAPI-Key": "5167fad87bmshd240cb454662cebp106d20jsne4de16f885fd",
-    "X-RapidAPI-Host": "jsearch.p.rapidapi.com"
+    "API-Key": "Enter your API key",
+    "API-Host": "Enter your API host"
 }
 
 @app.route('/job-search', methods=['GET', 'POST'])
